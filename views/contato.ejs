@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Contato</title>
+</head>
+<body>
+    <h1>Contato</h1>
+    <hr>
+    <h2>Esta é a nossa lista de consultores:</h2>
+    <% 
+        let contato = [
+            {nome: 'João', telefone: '(21) 987654321', email: 'joao@pdh.com'},
+            {nome: 'Vanusa', telefone: '(21) 912345678', email: 'vanusa@pdh.com'},
+            {nome: 'Monalisa', telefone: '(21) 975312468', email: 'lisa@pdh.com'},
+        ]
+    %>
+
+    <ul>
+        <% for (let item of contato) { %>
+            <li><h3><%= item.nome %>:</h3> <%= item.telefone %> / <%= item.email %></li>
+        <%}%>
+    </ul>
+</body>
+</html>
